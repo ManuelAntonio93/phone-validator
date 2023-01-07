@@ -2,13 +2,14 @@
 """
 Created on Sat Sep 18 13:41:01 2021
 
-@author: Alfredo y Antonio
+@author: Manuel Antonio Noriega
 
 
 Program Description: 
     
 Phone Validator Automatation using Google Chrome Web Driver
 https://sites.google.com/a/chromium.org/chromedriver/downloads
+
 """
 #PREPARING THE ENVIROMENT
 
@@ -84,8 +85,8 @@ while len(idx_empty) > 0:
             
         except Exception as error:
             print(error)
+            
     df['Phone Validator'] = df['Phone Validator'].str.upper()
-    df['Phone Validator'] = df['Phone Validator'].apply(lambda x: 'CELL PHONE' if x=='MOBILE')
 
 #convert into csv file
 df.to_csv('Vivacitas_VC_Phone_Numbers_Validator.csv')
